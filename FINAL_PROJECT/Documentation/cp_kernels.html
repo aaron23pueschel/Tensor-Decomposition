@@ -1,0 +1,707 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>cp_kernels API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>cp_kernels</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">import cupy as cp
+
+
+def ttm_launcher(A,B,X,out1,out2,dim1,dim2,dim3,rank,kernels,skip=1,num_kernels = 8):
+    &#34;&#34;&#34;
+    Returns the ttm operation for a given mode.
+
+    Parameters
+    ----------
+    A : cupy.ndarray
+        Factor matrix A.
+    B : cupy.ndarray
+        Factor matrix B.
+    X : cupy.ndarray
+        Tensor X.
+    out1 : cupy.ndarray
+        Output 1.
+    out2 : cupy.ndarray
+        Output 2.
+    dim1 : int
+        Dimension 1.
+    dim2 : int
+        Dimension 2.
+    dim3 : int
+        Dimension 3.
+    rank : int
+        Rank of the tensor.
+    kernels : function
+        Compiled kernel functions.
+    skip : int, optional
+        Dimension to skip. Defaults to 1.
+    num_kernels : int, optional
+        This is actually blocksize.
+
+    Returns
+    -------
+    None
+    &#34;&#34;&#34;
+    min_rank2 = min([rank,dim2])
+    min_rank1 = min([rank,dim1])
+    min_rank3 = min([rank,dim3])
+
+    
+    block_dim1 = dim1//(num_kernels)+1
+    block_dim2 = dim2//(num_kernels)+1
+    block_dim3 = dim3//(num_kernels)+1
+
+    block_rank1 = min_rank1//(num_kernels)+1
+    block_rank2 = min_rank2//(num_kernels)+1
+    block_rank3 = min_rank3//(num_kernels)+1
+    max_dim = (num_kernels,num_kernels,num_kernels)
+
+    
+    
+
+    if skip == 1:
+            kernels[1]((block_dim1,block_rank2,block_dim3),max_dim,(A,X,out1,dim1,dim2,dim3,min_rank2))
+            kernels[2]((block_dim1,block_rank2,block_rank3),max_dim,(B,out1,out2,dim1,min_rank2,dim3,min_rank3))
+   
+    if skip == 2:
+
+            kernels[0]((block_rank1,block_dim2,block_dim3),max_dim,(A,X,out1,dim1,dim2,dim3,min_rank1))
+            kernels[2]((block_rank1,block_dim2,block_rank3),max_dim,(B,out1,out2,min_rank1,dim2,dim3,min_rank3))
+
+    if skip == 3:
+            kernels[0]((block_rank1,block_dim2,block_dim3),max_dim,(A,X,out1,dim1,dim2,dim3,min_rank1))
+            kernels[1]((block_rank1,block_rank2,block_dim3),max_dim,(B,out1,out2,min_rank1,dim2,dim3,min_rank2))
+
+
+
+
+def ttm1_kernel(type_ = &#34;naive&#34;):
+    &#34;&#34;&#34;
+    Returns the ttm1 CUDA kernel.
+
+    Parameters
+    ----------
+    type_ : str, optional
+        Type of the ttm1 CUDA kernel. Defaults to &#34;naive&#34;.
+
+    Returns
+    -------
+    cupy.RawKernel
+        ttm1 function.
+    &#34;&#34;&#34;
+    if type_ ==&#34;naive&#34;:
+        ttm_kernel  = cp.RawKernel(r&#39;&#39;&#39;
+
+        extern &#34;C&#34; __global__
+
+        void ttm_1(const float* Q1, float* X, float* out, int dim1,int dim2,int dim3,int rank) {
+            int w = threadIdx.x + blockIdx.x * blockDim.x;
+            int j = threadIdx.y + blockIdx.y * blockDim.y;
+            int k = threadIdx.z + blockIdx.z * blockDim.z;
+            int threadId = threadIdx.x+blockDim.x*(threadIdx.y+blockDim.y*threadIdx.z);     
+            if(w&lt;rank &amp;&amp; j&lt;dim2 &amp;&amp; k&lt;dim3){            
+                float temp = 0;               
+                for(int i=0;i&lt;dim1;i++)
+                    temp+= Q1[i*rank+w]*X[i* dim2*dim3 + (j * dim3) + k]; 
+                out[w*dim2*dim3+j*dim3+k] = temp;
+            }
+        }&#39;&#39;&#39;, &#39;ttm_1&#39;)
+
+
+
+        return ttm_kernel
+    
+
+    ## BROKEN DO NOT USE
+    elif type_ == &#34;shared&#34;:
+        ttm_kernel  = cp.RawKernel(r&#39;&#39;&#39;
+
+            extern &#34;C&#34; __global__
+
+            void ttm_1(float* Q1, float* X, float* out, int dim1,int dim2,int dim3,int rank) {
+                const int BLOCKSIZE = 8;
+                
+                
+                float* Q1_temp = Q1;
+                float* X_temp = X;
+               
+                __shared__ float Xs[BLOCKSIZE][BLOCKSIZE][BLOCKSIZE];                                            
+                __shared__ float Qs[BLOCKSIZE*BLOCKSIZE];                            
+                int w = threadIdx.x + blockIdx.x * blockDim.x;
+                int j = threadIdx.y + blockIdx.y * blockDim.y;
+                int k = threadIdx.z + blockIdx.z * blockDim.z;
+                float sum = 0.0f;
+                Q1 +=  (blockIdx.x)*rank*BLOCKSIZE;
+                X += blockIdx.x*dim2*dim3*BLOCKSIZE;
+                __syncthreads(); 
+                                              
+                for(int C=0; C&lt;dim1/BLOCKSIZE+1;C++){
+                   
+                    __syncthreads();  // Make sure we are starting at the same place
+
+                    int i_shared = threadIdx.x + blockIdx.x * blockDim.x;
+                    if(i_shared*rank+w &lt; rank*dim1)
+                        Qs[threadIdx.y*BLOCKSIZE+threadIdx.x] = Q1[threadIdx.y*rank+threadIdx.x];
+                    else 
+                        Qs[threadIdx.y*BLOCKSIZE+threadIdx.x] = 0.0f;    
+                    
+                                                                                                        
+                    if(i_shared&lt;dim1 &amp;&amp; j&lt;dim2 &amp;&amp; k&lt;dim3)
+                        Xs[threadIdx.x][threadIdx.y][threadIdx.z]=X[threadIdx.x* dim2*dim3 + (j * dim3) + k];
+                    else
+                        Xs[threadIdx.x][threadIdx.y][threadIdx.z] = 0.0f;
+        
+                        
+                    
+                    
+                    __syncthreads(); //Wait for threads to finish writing
+                    X +=  BLOCKSIZE*dim2*dim3;
+                    Q1 +=  BLOCKSIZE*rank;                        
+                    __syncthreads();
+                    if(w&lt;rank &amp;&amp; j&lt;dim2 &amp;&amp; k&lt;dim3){  
+                        float temp = 0.0f;
+                        int min_ = (dim1 &lt; BLOCKSIZE) ? dim1 : BLOCKSIZE;                
+                        for(int i=0;i&lt;BLOCKSIZE;i++){
+                            temp+= Qs[i*BLOCKSIZE+ threadIdx.x]*Xs[i][threadIdx.y][threadIdx.z]; // Q may be transposed. if so, switch i and w in this line
+                          //  printf(&#34;%f %f\n&#34;,Xs[i][threadIdx.y][threadIdx.z],X_temp[i* dim2*dim3 + (j * dim3) + k]);
+                          //  printf(&#34;%f %f %d\n&#34;,Qs[i*BLOCKSIZE+threadIdx.x],Q1_temp[i*rank+w],i);
+                            
+                        }
+                        sum += temp;
+                        __syncthreads();
+                    }
+                     __syncthreads();
+                }
+                 __syncthreads();
+               // if(w&lt;rank &amp;&amp; j&lt;dim2 &amp;&amp; k&lt;dim3)  {                         
+                    out[w*dim2*dim3+j*dim3+k] += sum; 
+                __syncthreads();                                                           
+               // printf(&#34;%f\n&#34;,out[w*dim2*dim3+j*dim3+k]);
+                
+               // }
+           __syncthreads();
+             
+            }&#39;&#39;&#39;, &#39;ttm_1&#39;)
+        return ttm_kernel
+       
+
+    
+
+
+
+def ttm2_kernel():
+    &#34;&#34;&#34;
+    Returns the CUDA ttm2 kernel.
+
+    Returns
+    -------
+    cupy.RawKernel
+        ttm2 CUDA function.
+    &#34;&#34;&#34;
+
+    ttm_kernel  = cp.RawKernel(r&#39;&#39;&#39;
+
+    extern &#34;C&#34; __global__
+
+    void ttm_2(const float* Q2, float* X, float* out, int dim1,int dim2,int dim3,int rank) {
+                             
+            int i = threadIdx.x + blockIdx.x * blockDim.x;
+            int w = threadIdx.y + blockIdx.y * blockDim.y;
+            int k = threadIdx.z + blockIdx.z * blockDim.z;
+            if(i&lt;dim1 &amp;&amp; w&lt;rank &amp;&amp; k&lt;dim3){                      
+                float temp = 0;               
+                for(int j=0;j&lt;dim2;j++){
+                    temp+= Q2[j*rank+w]*X[i* dim2*dim3 + (j * dim3) + k]; // Q may be transposed. if so, switch i and w in this line
+                }
+            
+                out[i*rank*dim3+w*dim3+k] = temp;
+
+            }
+    }&#39;&#39;&#39;, &#39;ttm_2&#39;)
+    return ttm_kernel
+
+
+
+def ttm3_kernel():
+    &#34;&#34;&#34;
+    Returns the ttm3 CUDA kernel.
+
+    Returns
+    -------
+    cupy.RawKernel
+        ttm3 kernel.
+    &#34;&#34;&#34;
+    ttm_kernel  = cp.RawKernel(r&#39;&#39;&#39;
+
+    extern &#34;C&#34; __global__
+
+    void ttm_3(const float* Q3, float* X, float* out, int dim1,int dim2,int dim3,int rank) {
+        int i = threadIdx.x + blockIdx.x * blockDim.x;
+        int j = threadIdx.y + blockIdx.y * blockDim.y;
+        int w = threadIdx.z + blockIdx.z * blockDim.z;
+        if(i&lt;dim1 &amp;&amp; j&lt;dim2 &amp;&amp; w&lt;rank){                      
+            float temp = 0;               
+            for(int k=0;k&lt;dim3;k++)
+                temp+= Q3[k*rank+w]*X[i* dim2*dim3 + (j * dim3) + k]; // Q may be transposed. if so, switch i and w in this line
+            out[i*dim2*rank+j*rank+w] = temp;
+        }
+    }&#39;&#39;&#39;, &#39;ttm_3&#39;)
+    return ttm_kernel
+
+
+def khatriRao_kernel():
+    &#34;&#34;&#34;
+    Returns the CUDA Khatri Rao kernel.
+
+    Returns
+    -------
+    cupy.RawKernel
+        Khatri Rao kernel.
+    &#34;&#34;&#34;
+    khatriRao  = cp.RawKernel(r&#39;&#39;&#39;
+
+    extern &#34;C&#34; __global__
+
+    void khatriRao(const float* M1, const float* M2, float* out, int dim1,int dim2,int rank) {
+        int i = threadIdx.y + blockIdx.y * blockDim.y;
+        int r = threadIdx.x + blockIdx.x * blockDim.x;
+        //printf(&#34;%d %d\n&#34;,blockDim.y,blockIdx.y);
+        if(r&lt;rank &amp;&amp; i&lt;dim1){                    
+            for(int j=0;j&lt;dim2;j++){
+                out[i*dim2*rank+j*rank+r]=M1[i+dim1*r]*M2[j+dim2*r];  
+                
+            }
+        }
+
+
+
+
+    }&#39;&#39;&#39;, &#39;khatriRao&#39;)
+    return khatriRao</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="cp_kernels.khatriRao_kernel"><code class="name flex">
+<span>def <span class="ident">khatriRao_kernel</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the CUDA Khatri Rao kernel.</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>cupy.RawKernel</code></dt>
+<dd>Khatri Rao kernel.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def khatriRao_kernel():
+    &#34;&#34;&#34;
+    Returns the CUDA Khatri Rao kernel.
+
+    Returns
+    -------
+    cupy.RawKernel
+        Khatri Rao kernel.
+    &#34;&#34;&#34;
+    khatriRao  = cp.RawKernel(r&#39;&#39;&#39;
+
+    extern &#34;C&#34; __global__
+
+    void khatriRao(const float* M1, const float* M2, float* out, int dim1,int dim2,int rank) {
+        int i = threadIdx.y + blockIdx.y * blockDim.y;
+        int r = threadIdx.x + blockIdx.x * blockDim.x;
+        //printf(&#34;%d %d\n&#34;,blockDim.y,blockIdx.y);
+        if(r&lt;rank &amp;&amp; i&lt;dim1){                    
+            for(int j=0;j&lt;dim2;j++){
+                out[i*dim2*rank+j*rank+r]=M1[i+dim1*r]*M2[j+dim2*r];  
+                
+            }
+        }
+
+
+
+
+    }&#39;&#39;&#39;, &#39;khatriRao&#39;)
+    return khatriRao</code></pre>
+</details>
+</dd>
+<dt id="cp_kernels.ttm1_kernel"><code class="name flex">
+<span>def <span class="ident">ttm1_kernel</span></span>(<span>type_='naive')</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the ttm1 CUDA kernel.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>type_</code></strong> :&ensp;<code>str</code>, optional</dt>
+<dd>Type of the ttm1 CUDA kernel. Defaults to "naive".</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>cupy.RawKernel</code></dt>
+<dd>ttm1 function.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def ttm1_kernel(type_ = &#34;naive&#34;):
+    &#34;&#34;&#34;
+    Returns the ttm1 CUDA kernel.
+
+    Parameters
+    ----------
+    type_ : str, optional
+        Type of the ttm1 CUDA kernel. Defaults to &#34;naive&#34;.
+
+    Returns
+    -------
+    cupy.RawKernel
+        ttm1 function.
+    &#34;&#34;&#34;
+    if type_ ==&#34;naive&#34;:
+        ttm_kernel  = cp.RawKernel(r&#39;&#39;&#39;
+
+        extern &#34;C&#34; __global__
+
+        void ttm_1(const float* Q1, float* X, float* out, int dim1,int dim2,int dim3,int rank) {
+            int w = threadIdx.x + blockIdx.x * blockDim.x;
+            int j = threadIdx.y + blockIdx.y * blockDim.y;
+            int k = threadIdx.z + blockIdx.z * blockDim.z;
+            int threadId = threadIdx.x+blockDim.x*(threadIdx.y+blockDim.y*threadIdx.z);     
+            if(w&lt;rank &amp;&amp; j&lt;dim2 &amp;&amp; k&lt;dim3){            
+                float temp = 0;               
+                for(int i=0;i&lt;dim1;i++)
+                    temp+= Q1[i*rank+w]*X[i* dim2*dim3 + (j * dim3) + k]; 
+                out[w*dim2*dim3+j*dim3+k] = temp;
+            }
+        }&#39;&#39;&#39;, &#39;ttm_1&#39;)
+
+
+
+        return ttm_kernel
+    
+
+    ## BROKEN DO NOT USE
+    elif type_ == &#34;shared&#34;:
+        ttm_kernel  = cp.RawKernel(r&#39;&#39;&#39;
+
+            extern &#34;C&#34; __global__
+
+            void ttm_1(float* Q1, float* X, float* out, int dim1,int dim2,int dim3,int rank) {
+                const int BLOCKSIZE = 8;
+                
+                
+                float* Q1_temp = Q1;
+                float* X_temp = X;
+               
+                __shared__ float Xs[BLOCKSIZE][BLOCKSIZE][BLOCKSIZE];                                            
+                __shared__ float Qs[BLOCKSIZE*BLOCKSIZE];                            
+                int w = threadIdx.x + blockIdx.x * blockDim.x;
+                int j = threadIdx.y + blockIdx.y * blockDim.y;
+                int k = threadIdx.z + blockIdx.z * blockDim.z;
+                float sum = 0.0f;
+                Q1 +=  (blockIdx.x)*rank*BLOCKSIZE;
+                X += blockIdx.x*dim2*dim3*BLOCKSIZE;
+                __syncthreads(); 
+                                              
+                for(int C=0; C&lt;dim1/BLOCKSIZE+1;C++){
+                   
+                    __syncthreads();  // Make sure we are starting at the same place
+
+                    int i_shared = threadIdx.x + blockIdx.x * blockDim.x;
+                    if(i_shared*rank+w &lt; rank*dim1)
+                        Qs[threadIdx.y*BLOCKSIZE+threadIdx.x] = Q1[threadIdx.y*rank+threadIdx.x];
+                    else 
+                        Qs[threadIdx.y*BLOCKSIZE+threadIdx.x] = 0.0f;    
+                    
+                                                                                                        
+                    if(i_shared&lt;dim1 &amp;&amp; j&lt;dim2 &amp;&amp; k&lt;dim3)
+                        Xs[threadIdx.x][threadIdx.y][threadIdx.z]=X[threadIdx.x* dim2*dim3 + (j * dim3) + k];
+                    else
+                        Xs[threadIdx.x][threadIdx.y][threadIdx.z] = 0.0f;
+        
+                        
+                    
+                    
+                    __syncthreads(); //Wait for threads to finish writing
+                    X +=  BLOCKSIZE*dim2*dim3;
+                    Q1 +=  BLOCKSIZE*rank;                        
+                    __syncthreads();
+                    if(w&lt;rank &amp;&amp; j&lt;dim2 &amp;&amp; k&lt;dim3){  
+                        float temp = 0.0f;
+                        int min_ = (dim1 &lt; BLOCKSIZE) ? dim1 : BLOCKSIZE;                
+                        for(int i=0;i&lt;BLOCKSIZE;i++){
+                            temp+= Qs[i*BLOCKSIZE+ threadIdx.x]*Xs[i][threadIdx.y][threadIdx.z]; // Q may be transposed. if so, switch i and w in this line
+                          //  printf(&#34;%f %f\n&#34;,Xs[i][threadIdx.y][threadIdx.z],X_temp[i* dim2*dim3 + (j * dim3) + k]);
+                          //  printf(&#34;%f %f %d\n&#34;,Qs[i*BLOCKSIZE+threadIdx.x],Q1_temp[i*rank+w],i);
+                            
+                        }
+                        sum += temp;
+                        __syncthreads();
+                    }
+                     __syncthreads();
+                }
+                 __syncthreads();
+               // if(w&lt;rank &amp;&amp; j&lt;dim2 &amp;&amp; k&lt;dim3)  {                         
+                    out[w*dim2*dim3+j*dim3+k] += sum; 
+                __syncthreads();                                                           
+               // printf(&#34;%f\n&#34;,out[w*dim2*dim3+j*dim3+k]);
+                
+               // }
+           __syncthreads();
+             
+            }&#39;&#39;&#39;, &#39;ttm_1&#39;)
+        return ttm_kernel</code></pre>
+</details>
+</dd>
+<dt id="cp_kernels.ttm2_kernel"><code class="name flex">
+<span>def <span class="ident">ttm2_kernel</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the CUDA ttm2 kernel.</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>cupy.RawKernel</code></dt>
+<dd>ttm2 CUDA function.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def ttm2_kernel():
+    &#34;&#34;&#34;
+    Returns the CUDA ttm2 kernel.
+
+    Returns
+    -------
+    cupy.RawKernel
+        ttm2 CUDA function.
+    &#34;&#34;&#34;
+
+    ttm_kernel  = cp.RawKernel(r&#39;&#39;&#39;
+
+    extern &#34;C&#34; __global__
+
+    void ttm_2(const float* Q2, float* X, float* out, int dim1,int dim2,int dim3,int rank) {
+                             
+            int i = threadIdx.x + blockIdx.x * blockDim.x;
+            int w = threadIdx.y + blockIdx.y * blockDim.y;
+            int k = threadIdx.z + blockIdx.z * blockDim.z;
+            if(i&lt;dim1 &amp;&amp; w&lt;rank &amp;&amp; k&lt;dim3){                      
+                float temp = 0;               
+                for(int j=0;j&lt;dim2;j++){
+                    temp+= Q2[j*rank+w]*X[i* dim2*dim3 + (j * dim3) + k]; // Q may be transposed. if so, switch i and w in this line
+                }
+            
+                out[i*rank*dim3+w*dim3+k] = temp;
+
+            }
+    }&#39;&#39;&#39;, &#39;ttm_2&#39;)
+    return ttm_kernel</code></pre>
+</details>
+</dd>
+<dt id="cp_kernels.ttm3_kernel"><code class="name flex">
+<span>def <span class="ident">ttm3_kernel</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the ttm3 CUDA kernel.</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>cupy.RawKernel</code></dt>
+<dd>ttm3 kernel.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def ttm3_kernel():
+    &#34;&#34;&#34;
+    Returns the ttm3 CUDA kernel.
+
+    Returns
+    -------
+    cupy.RawKernel
+        ttm3 kernel.
+    &#34;&#34;&#34;
+    ttm_kernel  = cp.RawKernel(r&#39;&#39;&#39;
+
+    extern &#34;C&#34; __global__
+
+    void ttm_3(const float* Q3, float* X, float* out, int dim1,int dim2,int dim3,int rank) {
+        int i = threadIdx.x + blockIdx.x * blockDim.x;
+        int j = threadIdx.y + blockIdx.y * blockDim.y;
+        int w = threadIdx.z + blockIdx.z * blockDim.z;
+        if(i&lt;dim1 &amp;&amp; j&lt;dim2 &amp;&amp; w&lt;rank){                      
+            float temp = 0;               
+            for(int k=0;k&lt;dim3;k++)
+                temp+= Q3[k*rank+w]*X[i* dim2*dim3 + (j * dim3) + k]; // Q may be transposed. if so, switch i and w in this line
+            out[i*dim2*rank+j*rank+w] = temp;
+        }
+    }&#39;&#39;&#39;, &#39;ttm_3&#39;)
+    return ttm_kernel</code></pre>
+</details>
+</dd>
+<dt id="cp_kernels.ttm_launcher"><code class="name flex">
+<span>def <span class="ident">ttm_launcher</span></span>(<span>A, B, X, out1, out2, dim1, dim2, dim3, rank, kernels, skip=1, num_kernels=8)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the ttm operation for a given mode.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>A</code></strong> :&ensp;<code>cupy.ndarray</code></dt>
+<dd>Factor matrix A.</dd>
+<dt><strong><code>B</code></strong> :&ensp;<code>cupy.ndarray</code></dt>
+<dd>Factor matrix B.</dd>
+<dt><strong><code>X</code></strong> :&ensp;<code>cupy.ndarray</code></dt>
+<dd>Tensor X.</dd>
+<dt><strong><code>out1</code></strong> :&ensp;<code>cupy.ndarray</code></dt>
+<dd>Output 1.</dd>
+<dt><strong><code>out2</code></strong> :&ensp;<code>cupy.ndarray</code></dt>
+<dd>Output 2.</dd>
+<dt><strong><code>dim1</code></strong> :&ensp;<code>int</code></dt>
+<dd>Dimension 1.</dd>
+<dt><strong><code>dim2</code></strong> :&ensp;<code>int</code></dt>
+<dd>Dimension 2.</dd>
+<dt><strong><code>dim3</code></strong> :&ensp;<code>int</code></dt>
+<dd>Dimension 3.</dd>
+<dt><strong><code>rank</code></strong> :&ensp;<code>int</code></dt>
+<dd>Rank of the tensor.</dd>
+<dt><strong><code>kernels</code></strong> :&ensp;<code>function</code></dt>
+<dd>Compiled kernel functions.</dd>
+<dt><strong><code>skip</code></strong> :&ensp;<code>int</code>, optional</dt>
+<dd>Dimension to skip. Defaults to 1.</dd>
+<dt><strong><code>num_kernels</code></strong> :&ensp;<code>int</code>, optional</dt>
+<dd>This is actually blocksize.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>None</code></dt>
+<dd>&nbsp;</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def ttm_launcher(A,B,X,out1,out2,dim1,dim2,dim3,rank,kernels,skip=1,num_kernels = 8):
+    &#34;&#34;&#34;
+    Returns the ttm operation for a given mode.
+
+    Parameters
+    ----------
+    A : cupy.ndarray
+        Factor matrix A.
+    B : cupy.ndarray
+        Factor matrix B.
+    X : cupy.ndarray
+        Tensor X.
+    out1 : cupy.ndarray
+        Output 1.
+    out2 : cupy.ndarray
+        Output 2.
+    dim1 : int
+        Dimension 1.
+    dim2 : int
+        Dimension 2.
+    dim3 : int
+        Dimension 3.
+    rank : int
+        Rank of the tensor.
+    kernels : function
+        Compiled kernel functions.
+    skip : int, optional
+        Dimension to skip. Defaults to 1.
+    num_kernels : int, optional
+        This is actually blocksize.
+
+    Returns
+    -------
+    None
+    &#34;&#34;&#34;
+    min_rank2 = min([rank,dim2])
+    min_rank1 = min([rank,dim1])
+    min_rank3 = min([rank,dim3])
+
+    
+    block_dim1 = dim1//(num_kernels)+1
+    block_dim2 = dim2//(num_kernels)+1
+    block_dim3 = dim3//(num_kernels)+1
+
+    block_rank1 = min_rank1//(num_kernels)+1
+    block_rank2 = min_rank2//(num_kernels)+1
+    block_rank3 = min_rank3//(num_kernels)+1
+    max_dim = (num_kernels,num_kernels,num_kernels)
+
+    
+    
+
+    if skip == 1:
+            kernels[1]((block_dim1,block_rank2,block_dim3),max_dim,(A,X,out1,dim1,dim2,dim3,min_rank2))
+            kernels[2]((block_dim1,block_rank2,block_rank3),max_dim,(B,out1,out2,dim1,min_rank2,dim3,min_rank3))
+   
+    if skip == 2:
+
+            kernels[0]((block_rank1,block_dim2,block_dim3),max_dim,(A,X,out1,dim1,dim2,dim3,min_rank1))
+            kernels[2]((block_rank1,block_dim2,block_rank3),max_dim,(B,out1,out2,min_rank1,dim2,dim3,min_rank3))
+
+    if skip == 3:
+            kernels[0]((block_rank1,block_dim2,block_dim3),max_dim,(A,X,out1,dim1,dim2,dim3,min_rank1))
+            kernels[1]((block_rank1,block_rank2,block_dim3),max_dim,(B,out1,out2,min_rank1,dim2,dim3,min_rank2))</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="cp_kernels.khatriRao_kernel" href="#cp_kernels.khatriRao_kernel">khatriRao_kernel</a></code></li>
+<li><code><a title="cp_kernels.ttm1_kernel" href="#cp_kernels.ttm1_kernel">ttm1_kernel</a></code></li>
+<li><code><a title="cp_kernels.ttm2_kernel" href="#cp_kernels.ttm2_kernel">ttm2_kernel</a></code></li>
+<li><code><a title="cp_kernels.ttm3_kernel" href="#cp_kernels.ttm3_kernel">ttm3_kernel</a></code></li>
+<li><code><a title="cp_kernels.ttm_launcher" href="#cp_kernels.ttm_launcher">ttm_launcher</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>

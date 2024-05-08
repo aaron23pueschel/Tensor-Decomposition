@@ -1,0 +1,173 @@
+RANDOM DIMENSIONS
+TEST NUMBER:  0
+Rank:  196
+Dim1:  192
+Dim2:  126
+Dim3:  176
+Cuda Time:  9.980324506759644
+Serial Time:  1809.5438611507416
+TEST NUMBER:  1
+Rank:  116
+Dim1:  125
+Dim2:  103
+Dim3:  130
+Cuda Time:  2.734158515930176
+Serial Time:  517.8398928642273
+TEST NUMBER:  2
+Rank:  137
+Dim1:  190
+Dim2:  107
+Dim3:  155
+Cuda Time:  4.936125755310059
+Serial Time:  982.0873076915741
+TEST NUMBER:  3
+Rank:  119
+Dim1:  179
+Dim2:  140
+Dim3:  193
+Cuda Time:  5.169169187545776
+Serial Time:  1226.4087028503418
+TEST NUMBER:  4
+Rank:  173
+Dim1:  134
+Dim2:  169
+Dim3:  102
+Cuda Time:  4.7774338722229
+Serial Time:  896.9533121585846
+TEST NUMBER:  5
+Rank:  198
+Dim1:  173
+Dim2:  105
+Dim3:  149
+Cuda Time:  6.485901832580566
+Serial Time:  1091.3222925662994
+TEST NUMBER:  6
+Rank:  123
+Dim1:  107
+Dim2:  194
+Dim3:  108
+Cuda Time:  3.129974842071533
+Serial Time:  642.2951402664185
+TEST NUMBER:  7
+Rank:  124
+Dim1:  105
+Dim2:  188
+Dim3:  191
+Cuda Time:  4.660348415374756
+Serial Time:  1034.50168466568
+TEST NUMBER:  8
+Rank:  120
+Dim1:  143
+Dim2:  107
+Dim3:  125
+Cuda Time:  3.0731186866760254
+Serial Time:  585.2848918437958
+TEST NUMBER:  9
+Rank:  176
+Dim1:  132
+Dim2:  186
+Dim3:  196
+Cuda Time:  9.875164270401001
+Serial Time:  1874.7887301445007
+
+TALL SKINNY DIMENSIONS
+TEST NUMBER:  0
+Rank:  14
+Dim1:  277
+Dim2:  239
+Dim3:  211
+Cuda Time:  0.7551238536834717
+Serial Time:  395.66881275177
+TEST NUMBER:  1
+Rank:  12
+Dim1:  236
+Dim2:  208
+Dim3:  266
+Cuda Time:  0.6812043190002441
+Serial Time:  261.5277020931244
+TEST NUMBER:  2
+Rank:  13
+Dim1:  218
+Dim2:  215
+Dim3:  203
+Cuda Time:  0.5446860790252686
+Serial Time:  279.03319549560547
+TEST NUMBER:  3
+Rank:  12
+Dim1:  235
+Dim2:  218
+Dim3:  279
+Cuda Time:  0.776425838470459
+Serial Time:  394.91930627822876
+TEST NUMBER:  4
+Rank:  11
+Dim1:  250
+Dim2:  201
+Dim3:  293
+Cuda Time:  0.78041672706604
+Serial Time:  363.22591495513916
+TEST NUMBER:  5
+Rank:  19
+Dim1:  268
+Dim2:  290
+Dim3:  242
+Cuda Time:  1.450249195098877
+Serial Time:  658.8045766353607
+TEST NUMBER:  6
+Rank:  19
+Dim1:  200
+Dim2:  231
+Dim3:  294
+Cuda Time:  1.0458500385284424
+Serial Time:  647.8402428627014
+TEST NUMBER:  7
+Rank:  16
+Dim1:  240
+Dim2:  291
+Dim3:  286
+Cuda Time:  1.0707602500915527
+Serial Time:  661.9532434940338
+TEST NUMBER:  8
+Rank:  12
+Dim1:  289
+Dim2:  281
+Dim3:  222
+Cuda Time:  0.9391655921936035
+Serial Time:  513.0037574768066
+TEST NUMBER:  9
+Rank:  10
+Dim1:  258
+Dim2:  260
+Dim3:  250
+Cuda Time:  0.873253345489502
+Serial Time:  262.2104163169861
+
+SHORT FAT DIMENSIONS
+/home/math12/.local/lib/python3.10/site-packages/numpy/linalg/linalg.py:987: RuntimeWarning: overflow encountered in cast
+  r = r.astype(result_t, copy=False)
+TEST NUMBER:  0
+Rank:  541
+Dim1:  17
+Dim2:  36
+Dim3:  18
+Cuda Time:  1.0655784606933594
+Serial Time:  51.07966470718384
+TEST NUMBER:  1
+Rank:  641
+Dim1:  28
+Dim2:  40
+Dim3:  47
+Cuda Time:  1.8878600597381592
+Serial Time:  90.64019703865051
+Traceback (most recent call last):
+  File "/home/math12/src/HPCA/HPCA/FINAL_PROJECT/test.py", line 130, in <module>
+    S = SU.decompose_QR_SERIAL(X,rank=rank,max_iter=max_iterations,factor_matrices=[a_np,b_np,c_np],verbose=False)
+  File "/home/math12/src/HPCA/HPCA/FINAL_PROJECT/serial_utils.py", line 197, in decompose_QR_SERIAL
+    c = linalg.solve_triangular(R2,W.T).T
+  File "/home/math12/.local/lib/python3.10/site-packages/scipy/linalg/_basic.py", line 333, in solve_triangular
+    a1 = _asarray_validated(a, check_finite=check_finite)
+  File "/home/math12/.local/lib/python3.10/site-packages/scipy/_lib/_util.py", line 321, in _asarray_validated
+    a = toarray(a)
+  File "/home/math12/.local/lib/python3.10/site-packages/numpy/lib/function_base.py", line 630, in asarray_chkfinite
+    raise ValueError(
+ValueError: array must not contain infs or NaNs

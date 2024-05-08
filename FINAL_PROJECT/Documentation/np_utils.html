@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>np_utils API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>np_utils</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">import numpy as np
+from scipy import linalg
+
+
+def f_unfold(tensor, mode=0,order=&#39;F&#39;):
+    &#34;&#34;&#34;
+    Returns an unfolded mode of a tensor.
+
+    Parameters
+    ----------
+    tensor : numpy.array
+        Order 3 tensor.
+    mode : int, optional
+        The mode unfolding of the tensor. Defaults to 0.
+    order : str, optional
+        Define Column or Row major ordering for the unfolding. Defaults to Fortran unfolding.
+
+    Returns
+    -------
+    numpy.array
+        The unfolded mode of the tensor.
+    &#34;&#34;&#34;
+    return np.reshape(np.moveaxis(tensor, mode, 0), (tensor.shape[mode], -1), order=order)
+
+
+
+def khatri_rao(a,b):
+    &#34;&#34;&#34;
+    Returns the Khatri Rao product of two factor matrices. Verify the second dimensions are equal.
+
+    Parameters
+    ----------
+    a : numpy.array
+        First matrix.
+    b : numpy.array
+        Second matrix. Both matrices should have the same number of columns.
+
+    Returns
+    -------
+    numpy.array
+        The Khatri Rao product of the two matrices.
+    &#34;&#34;&#34;
+    return (a[:,None] * b).reshape(-1,a.shape[1])
+
+
+
+def ttm_rank2(Q1,Q2,X,skip=1):
+    &#34;&#34;&#34;
+    Returns the second order tensor matrix product.
+
+    Parameters
+    ----------
+    Q1 : numpy.array
+        First factor matrix.
+    Q2 : numpy.array
+        Second factor matrix.
+    X : numpy.array
+        3D matrix.
+    skip : int, optional
+        Choose which dimension to skip. Defaults to 1.
+
+    Returns
+    -------
+    numpy.array
+        The tensor matrix product.
+
+    &#34;&#34;&#34;
+
+
+    if skip == 1:
+        X = np.einsum(&#39;jl,ilk-&gt;ijk&#39;, Q1.T,X)
+        return np.einsum(&#39;kl,ijl-&gt;ijk&#39;, Q2.T, X)
+    elif skip ==2:
+        X = np.einsum(&#39;jh,hlk-&gt;jlk&#39;, Q1.T,X)
+        return np.einsum(&#39;kl,ijl-&gt;ijk&#39;, Q2.T, X)
+    elif skip==3:
+        X = np.einsum(&#39;jh,hlk-&gt;jlk&#39;, Q1.T,X)
+        return  np.einsum(&#39;jl,ilk-&gt;ijk&#39;, Q2.T,X)
+
+
+def decompose_normal_eqns(tensor, factor_matrices = None,rank=10, max_iter=501, rel_tol = 10e-10,verbose=True):
+    &#34;&#34;&#34;
+    Decompose a tensor using normal equations.
+
+    Parameters
+    ----------
+    tensor : cupy.ndarray
+        The tensor to decompose.
+    factor_matrices : cupy.ndarray, optional
+        Initial factor matrices for the decomposition. Defaults to None.
+    rank : int, optional
+        The rank of the decomposition. Defaults to 10.
+    max_iter : int, optional
+        The maximum number of iterations for the decomposition. Defaults to 501.
+    rel_tol : float, optional
+        The relative tolerance for convergence. Defaults to 1e-10.
+    verbose : bool, optional
+        Whether to print verbose output. Defaults to True.
+
+    Returns
+    -------
+    cupy.ndarray
+        The decomposed factor matrices.
+    &#34;&#34;&#34;
+    if factor_matrices is not None:
+        a = factor_matrices[0]
+        b = factor_matrices[1]
+        c = factor_matrices[2]
+    else:
+        a = np.random.random((tensor.shape[0],rank))
+        b = np.random.random((tensor.shape[1],rank))
+        c = np.random.random((tensor.shape[2],rank))
+    
+    for epoch in range(max_iter):
+        # optimize a
+        input_a = khatri_rao(b,c)
+        target_a = f_unfold(tensor, mode=0,order=&#39;C&#39;).T
+       
+        a = np.linalg.solve(input_a.T@input_a, input_a.T@target_a).T
+        
+        # optimize b
+        input_b = khatri_rao(a,c)
+        target_b = f_unfold(tensor, mode=1,order=&#39;C&#39;).T
+        b = np.linalg.solve(input_b.T@input_b, input_b.T@target_b).T
+
+        # optimize c
+        input_c = khatri_rao(a,b)
+        target_c = f_unfold(tensor, mode=2,order=&#39;C&#39;).T
+        c = np.linalg.solve(input_c.T@input_c, input_c.T@target_c).T
+
+        res_a = np.linalg.norm(input_a.dot(a.T) - target_a,&#39;fro&#39;)
+        res_b = np.linalg.norm(input_b.dot(b.T) - target_b,&#39;fro&#39;)
+        res_c = np.linalg.norm(input_c.dot(c.T) - target_c,&#39;fro&#39;)
+
+        if verbose:
+            print(&#34;Epoch:&#34;, epoch, &#34;| Loss (A):&#34;, res_a, &#34;| Loss (B):&#34;, res_b, &#34;| Loss (C):&#34;, res_c)
+            if max([res_a,res_b,res_c])&lt; rel_tol:
+                print(f&#34;ALS converged in {epoch} iterations&#34;)
+                break
+    return a.T, b.T, c.T
+
+
+
+def decompose_QR(X, factor_matrices = None,rank=10, max_iter=501, rel_tol = 10e-10,verbose=True):
+    &#34;&#34;&#34;
+    Decompose tensor into CPD decomposition using QR
+
+    Parameters
+    ----------
+    X : cupy.ndarray
+        The tensor to decompose.
+    factor_matrices : cupy.ndarray, optional
+        Initial factor matrices for the decomposition. Defaults to None.
+    rank : int, optional
+        The rank of the decomposition. Defaults to 10.
+    max_iter : int, optional
+        The maximum number of iterations for the decomposition. Defaults to 501.
+    rel_tol : float, optional
+        The relative tolerance for convergence. Defaults to 1e-10.
+    verbose : bool, optional
+        Whether to print verbose output. Defaults to True.
+
+    Returns
+    -------
+    cupy.ndarray
+        The decomposed factor matrices.
+    &#34;&#34;&#34;
+    if factor_matrices is not None:
+        a = factor_matrices[0]
+        b = factor_matrices[1]
+        c = factor_matrices[2]
+    else:
+        a = np.random.random((X.shape[0],rank))
+        b = np.random.random((X.shape[1],rank))
+        c = np.random.random((X.shape[2],rank))
+    Qa,Ra = np.linalg.qr(a)
+    Qb,Rb = np.linalg.qr(b)
+    Qc,Rc = np.linalg.qr(c)
+    for epoch in range(max_iter):
+        
+        V0 = khatri_rao(Rc, Rb)
+        Q0,R0 = np.linalg.qr(V0)
+        Y = ttm_rank2(Qb,Qc,X)
+        Y0 = f_unfold(Y,mode=0)
+        W= Y0@Q0
+        a = linalg.solve_triangular(R0,W.T).T
+        Qa,Ra = np.linalg.qr(a)
+
+
+        V1 = khatri_rao(Rc, Ra)
+        Q1,R1 = np.linalg.qr(V1)
+        Y = ttm_rank2(Qa,Qc,X,skip=2)
+        Y0 = f_unfold(Y,mode=1)
+        W= Y0@Q1
+        b = linalg.solve_triangular(R1,W.T).T
+        Qb,Rb = np.linalg.qr(b)
+
+        V2 = khatri_rao(Rb, Ra)
+        Q2,R2 = np.linalg.qr(V2)
+        Y = ttm_rank2(Qa,Qb,X,skip=3)
+        Y0 = f_unfold(Y,mode=2)
+        W= Y0@Q2
+        c = linalg.solve_triangular(R2,W.T).T
+        Qc,Rc = np.linalg.qr(c)
+
+
+        res_a = np.linalg.norm(khatri_rao(c, b)@(a.T) - f_unfold(X,mode=0,order=&#39;F&#39;).T,&#39;fro&#39;)
+        res_b = np.linalg.norm(khatri_rao(c, a)@(b.T) - f_unfold(X,mode=1,order=&#39;F&#39;).T,&#39;fro&#39;)
+        res_c = np.linalg.norm(khatri_rao(b, a)@(c.T) - f_unfold(X,mode=2,order=&#39;F&#39;).T,&#39;fro&#39;)
+
+        if verbose:
+            print(&#34;Epoch:&#34;, epoch, &#34;| Loss (A):&#34;, res_a, &#34;| Loss (B):&#34;, res_b, &#34;| Loss (C):&#34;, res_c)
+        if max([res_a,res_b,res_c])&lt; rel_tol:
+            print(f&#34;ALS converged in {epoch} iterations&#34;)
+            break
+    return a.T, b.T, c.T</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="np_utils.decompose_QR"><code class="name flex">
+<span>def <span class="ident">decompose_QR</span></span>(<span>X, factor_matrices=None, rank=10, max_iter=501, rel_tol=1e-09, verbose=True)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Decompose tensor into CPD decomposition using QR</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>X</code></strong> :&ensp;<code>cupy.ndarray</code></dt>
+<dd>The tensor to decompose.</dd>
+<dt><strong><code>factor_matrices</code></strong> :&ensp;<code>cupy.ndarray</code>, optional</dt>
+<dd>Initial factor matrices for the decomposition. Defaults to None.</dd>
+<dt><strong><code>rank</code></strong> :&ensp;<code>int</code>, optional</dt>
+<dd>The rank of the decomposition. Defaults to 10.</dd>
+<dt><strong><code>max_iter</code></strong> :&ensp;<code>int</code>, optional</dt>
+<dd>The maximum number of iterations for the decomposition. Defaults to 501.</dd>
+<dt><strong><code>rel_tol</code></strong> :&ensp;<code>float</code>, optional</dt>
+<dd>The relative tolerance for convergence. Defaults to 1e-10.</dd>
+<dt><strong><code>verbose</code></strong> :&ensp;<code>bool</code>, optional</dt>
+<dd>Whether to print verbose output. Defaults to True.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>cupy.ndarray</code></dt>
+<dd>The decomposed factor matrices.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def decompose_QR(X, factor_matrices = None,rank=10, max_iter=501, rel_tol = 10e-10,verbose=True):
+    &#34;&#34;&#34;
+    Decompose tensor into CPD decomposition using QR
+
+    Parameters
+    ----------
+    X : cupy.ndarray
+        The tensor to decompose.
+    factor_matrices : cupy.ndarray, optional
+        Initial factor matrices for the decomposition. Defaults to None.
+    rank : int, optional
+        The rank of the decomposition. Defaults to 10.
+    max_iter : int, optional
+        The maximum number of iterations for the decomposition. Defaults to 501.
+    rel_tol : float, optional
+        The relative tolerance for convergence. Defaults to 1e-10.
+    verbose : bool, optional
+        Whether to print verbose output. Defaults to True.
+
+    Returns
+    -------
+    cupy.ndarray
+        The decomposed factor matrices.
+    &#34;&#34;&#34;
+    if factor_matrices is not None:
+        a = factor_matrices[0]
+        b = factor_matrices[1]
+        c = factor_matrices[2]
+    else:
+        a = np.random.random((X.shape[0],rank))
+        b = np.random.random((X.shape[1],rank))
+        c = np.random.random((X.shape[2],rank))
+    Qa,Ra = np.linalg.qr(a)
+    Qb,Rb = np.linalg.qr(b)
+    Qc,Rc = np.linalg.qr(c)
+    for epoch in range(max_iter):
+        
+        V0 = khatri_rao(Rc, Rb)
+        Q0,R0 = np.linalg.qr(V0)
+        Y = ttm_rank2(Qb,Qc,X)
+        Y0 = f_unfold(Y,mode=0)
+        W= Y0@Q0
+        a = linalg.solve_triangular(R0,W.T).T
+        Qa,Ra = np.linalg.qr(a)
+
+
+        V1 = khatri_rao(Rc, Ra)
+        Q1,R1 = np.linalg.qr(V1)
+        Y = ttm_rank2(Qa,Qc,X,skip=2)
+        Y0 = f_unfold(Y,mode=1)
+        W= Y0@Q1
+        b = linalg.solve_triangular(R1,W.T).T
+        Qb,Rb = np.linalg.qr(b)
+
+        V2 = khatri_rao(Rb, Ra)
+        Q2,R2 = np.linalg.qr(V2)
+        Y = ttm_rank2(Qa,Qb,X,skip=3)
+        Y0 = f_unfold(Y,mode=2)
+        W= Y0@Q2
+        c = linalg.solve_triangular(R2,W.T).T
+        Qc,Rc = np.linalg.qr(c)
+
+
+        res_a = np.linalg.norm(khatri_rao(c, b)@(a.T) - f_unfold(X,mode=0,order=&#39;F&#39;).T,&#39;fro&#39;)
+        res_b = np.linalg.norm(khatri_rao(c, a)@(b.T) - f_unfold(X,mode=1,order=&#39;F&#39;).T,&#39;fro&#39;)
+        res_c = np.linalg.norm(khatri_rao(b, a)@(c.T) - f_unfold(X,mode=2,order=&#39;F&#39;).T,&#39;fro&#39;)
+
+        if verbose:
+            print(&#34;Epoch:&#34;, epoch, &#34;| Loss (A):&#34;, res_a, &#34;| Loss (B):&#34;, res_b, &#34;| Loss (C):&#34;, res_c)
+        if max([res_a,res_b,res_c])&lt; rel_tol:
+            print(f&#34;ALS converged in {epoch} iterations&#34;)
+            break
+    return a.T, b.T, c.T</code></pre>
+</details>
+</dd>
+<dt id="np_utils.decompose_normal_eqns"><code class="name flex">
+<span>def <span class="ident">decompose_normal_eqns</span></span>(<span>tensor, factor_matrices=None, rank=10, max_iter=501, rel_tol=1e-09, verbose=True)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Decompose a tensor using normal equations.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>tensor</code></strong> :&ensp;<code>cupy.ndarray</code></dt>
+<dd>The tensor to decompose.</dd>
+<dt><strong><code>factor_matrices</code></strong> :&ensp;<code>cupy.ndarray</code>, optional</dt>
+<dd>Initial factor matrices for the decomposition. Defaults to None.</dd>
+<dt><strong><code>rank</code></strong> :&ensp;<code>int</code>, optional</dt>
+<dd>The rank of the decomposition. Defaults to 10.</dd>
+<dt><strong><code>max_iter</code></strong> :&ensp;<code>int</code>, optional</dt>
+<dd>The maximum number of iterations for the decomposition. Defaults to 501.</dd>
+<dt><strong><code>rel_tol</code></strong> :&ensp;<code>float</code>, optional</dt>
+<dd>The relative tolerance for convergence. Defaults to 1e-10.</dd>
+<dt><strong><code>verbose</code></strong> :&ensp;<code>bool</code>, optional</dt>
+<dd>Whether to print verbose output. Defaults to True.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>cupy.ndarray</code></dt>
+<dd>The decomposed factor matrices.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def decompose_normal_eqns(tensor, factor_matrices = None,rank=10, max_iter=501, rel_tol = 10e-10,verbose=True):
+    &#34;&#34;&#34;
+    Decompose a tensor using normal equations.
+
+    Parameters
+    ----------
+    tensor : cupy.ndarray
+        The tensor to decompose.
+    factor_matrices : cupy.ndarray, optional
+        Initial factor matrices for the decomposition. Defaults to None.
+    rank : int, optional
+        The rank of the decomposition. Defaults to 10.
+    max_iter : int, optional
+        The maximum number of iterations for the decomposition. Defaults to 501.
+    rel_tol : float, optional
+        The relative tolerance for convergence. Defaults to 1e-10.
+    verbose : bool, optional
+        Whether to print verbose output. Defaults to True.
+
+    Returns
+    -------
+    cupy.ndarray
+        The decomposed factor matrices.
+    &#34;&#34;&#34;
+    if factor_matrices is not None:
+        a = factor_matrices[0]
+        b = factor_matrices[1]
+        c = factor_matrices[2]
+    else:
+        a = np.random.random((tensor.shape[0],rank))
+        b = np.random.random((tensor.shape[1],rank))
+        c = np.random.random((tensor.shape[2],rank))
+    
+    for epoch in range(max_iter):
+        # optimize a
+        input_a = khatri_rao(b,c)
+        target_a = f_unfold(tensor, mode=0,order=&#39;C&#39;).T
+       
+        a = np.linalg.solve(input_a.T@input_a, input_a.T@target_a).T
+        
+        # optimize b
+        input_b = khatri_rao(a,c)
+        target_b = f_unfold(tensor, mode=1,order=&#39;C&#39;).T
+        b = np.linalg.solve(input_b.T@input_b, input_b.T@target_b).T
+
+        # optimize c
+        input_c = khatri_rao(a,b)
+        target_c = f_unfold(tensor, mode=2,order=&#39;C&#39;).T
+        c = np.linalg.solve(input_c.T@input_c, input_c.T@target_c).T
+
+        res_a = np.linalg.norm(input_a.dot(a.T) - target_a,&#39;fro&#39;)
+        res_b = np.linalg.norm(input_b.dot(b.T) - target_b,&#39;fro&#39;)
+        res_c = np.linalg.norm(input_c.dot(c.T) - target_c,&#39;fro&#39;)
+
+        if verbose:
+            print(&#34;Epoch:&#34;, epoch, &#34;| Loss (A):&#34;, res_a, &#34;| Loss (B):&#34;, res_b, &#34;| Loss (C):&#34;, res_c)
+            if max([res_a,res_b,res_c])&lt; rel_tol:
+                print(f&#34;ALS converged in {epoch} iterations&#34;)
+                break
+    return a.T, b.T, c.T</code></pre>
+</details>
+</dd>
+<dt id="np_utils.f_unfold"><code class="name flex">
+<span>def <span class="ident">f_unfold</span></span>(<span>tensor, mode=0, order='F')</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns an unfolded mode of a tensor.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>tensor</code></strong> :&ensp;<code>numpy.array</code></dt>
+<dd>Order 3 tensor.</dd>
+<dt><strong><code>mode</code></strong> :&ensp;<code>int</code>, optional</dt>
+<dd>The mode unfolding of the tensor. Defaults to 0.</dd>
+<dt><strong><code>order</code></strong> :&ensp;<code>str</code>, optional</dt>
+<dd>Define Column or Row major ordering for the unfolding. Defaults to Fortran unfolding.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>numpy.array</code></dt>
+<dd>The unfolded mode of the tensor.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def f_unfold(tensor, mode=0,order=&#39;F&#39;):
+    &#34;&#34;&#34;
+    Returns an unfolded mode of a tensor.
+
+    Parameters
+    ----------
+    tensor : numpy.array
+        Order 3 tensor.
+    mode : int, optional
+        The mode unfolding of the tensor. Defaults to 0.
+    order : str, optional
+        Define Column or Row major ordering for the unfolding. Defaults to Fortran unfolding.
+
+    Returns
+    -------
+    numpy.array
+        The unfolded mode of the tensor.
+    &#34;&#34;&#34;
+    return np.reshape(np.moveaxis(tensor, mode, 0), (tensor.shape[mode], -1), order=order)</code></pre>
+</details>
+</dd>
+<dt id="np_utils.khatri_rao"><code class="name flex">
+<span>def <span class="ident">khatri_rao</span></span>(<span>a, b)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the Khatri Rao product of two factor matrices. Verify the second dimensions are equal.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>a</code></strong> :&ensp;<code>numpy.array</code></dt>
+<dd>First matrix.</dd>
+<dt><strong><code>b</code></strong> :&ensp;<code>numpy.array</code></dt>
+<dd>Second matrix. Both matrices should have the same number of columns.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>numpy.array</code></dt>
+<dd>The Khatri Rao product of the two matrices.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def khatri_rao(a,b):
+    &#34;&#34;&#34;
+    Returns the Khatri Rao product of two factor matrices. Verify the second dimensions are equal.
+
+    Parameters
+    ----------
+    a : numpy.array
+        First matrix.
+    b : numpy.array
+        Second matrix. Both matrices should have the same number of columns.
+
+    Returns
+    -------
+    numpy.array
+        The Khatri Rao product of the two matrices.
+    &#34;&#34;&#34;
+    return (a[:,None] * b).reshape(-1,a.shape[1])</code></pre>
+</details>
+</dd>
+<dt id="np_utils.ttm_rank2"><code class="name flex">
+<span>def <span class="ident">ttm_rank2</span></span>(<span>Q1, Q2, X, skip=1)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the second order tensor matrix product.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>Q1</code></strong> :&ensp;<code>numpy.array</code></dt>
+<dd>First factor matrix.</dd>
+<dt><strong><code>Q2</code></strong> :&ensp;<code>numpy.array</code></dt>
+<dd>Second factor matrix.</dd>
+<dt><strong><code>X</code></strong> :&ensp;<code>numpy.array</code></dt>
+<dd>3D matrix.</dd>
+<dt><strong><code>skip</code></strong> :&ensp;<code>int</code>, optional</dt>
+<dd>Choose which dimension to skip. Defaults to 1.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>numpy.array</code></dt>
+<dd>The tensor matrix product.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def ttm_rank2(Q1,Q2,X,skip=1):
+    &#34;&#34;&#34;
+    Returns the second order tensor matrix product.
+
+    Parameters
+    ----------
+    Q1 : numpy.array
+        First factor matrix.
+    Q2 : numpy.array
+        Second factor matrix.
+    X : numpy.array
+        3D matrix.
+    skip : int, optional
+        Choose which dimension to skip. Defaults to 1.
+
+    Returns
+    -------
+    numpy.array
+        The tensor matrix product.
+
+    &#34;&#34;&#34;
+
+
+    if skip == 1:
+        X = np.einsum(&#39;jl,ilk-&gt;ijk&#39;, Q1.T,X)
+        return np.einsum(&#39;kl,ijl-&gt;ijk&#39;, Q2.T, X)
+    elif skip ==2:
+        X = np.einsum(&#39;jh,hlk-&gt;jlk&#39;, Q1.T,X)
+        return np.einsum(&#39;kl,ijl-&gt;ijk&#39;, Q2.T, X)
+    elif skip==3:
+        X = np.einsum(&#39;jh,hlk-&gt;jlk&#39;, Q1.T,X)
+        return  np.einsum(&#39;jl,ilk-&gt;ijk&#39;, Q2.T,X)</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="np_utils.decompose_QR" href="#np_utils.decompose_QR">decompose_QR</a></code></li>
+<li><code><a title="np_utils.decompose_normal_eqns" href="#np_utils.decompose_normal_eqns">decompose_normal_eqns</a></code></li>
+<li><code><a title="np_utils.f_unfold" href="#np_utils.f_unfold">f_unfold</a></code></li>
+<li><code><a title="np_utils.khatri_rao" href="#np_utils.khatri_rao">khatri_rao</a></code></li>
+<li><code><a title="np_utils.ttm_rank2" href="#np_utils.ttm_rank2">ttm_rank2</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>

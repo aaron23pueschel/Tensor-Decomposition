@@ -1,0 +1,38 @@
+Epoch: 0 Rel Error:  0.21967946
+Epoch: 0 | Loss (A): 10176.017 | Loss (B): 10176.016 | Loss (C): 10176.016
+Epoch: 1 Rel Error:  0.16189623
+Epoch: 1 | Loss (A): 7499.3755 | Loss (B): 7499.375 | Loss (C): 7499.3755
+Epoch: 2 Rel Error:  0.15262511
+Epoch: 2 | Loss (A): 7069.9175 | Loss (B): 7069.9175 | Loss (C): 7069.9175
+Epoch: 3 Rel Error:  0.14858982
+Epoch: 3 | Loss (A): 6882.994 | Loss (B): 6882.994 | Loss (C): 6882.9937
+Epoch: 4 Rel Error:  0.14609458
+Epoch: 4 | Loss (A): 6767.4097 | Loss (B): 6767.41 | Loss (C): 6767.4097
+Epoch: 5 Rel Error:  0.14429922
+Epoch: 5 | Loss (A): 6684.245 | Loss (B): 6684.2446 | Loss (C): 6684.2446
+Epoch: 6 Rel Error:  0.14289786
+Epoch: 6 | Loss (A): 6619.331 | Loss (B): 6619.3306 | Loss (C): 6619.3306
+Epoch: 7 Rel Error:  0.14174698
+Epoch: 7 | Loss (A): 6566.019 | Loss (B): 6566.02 | Loss (C): 6566.02
+Epoch: 8 Rel Error:  0.14076814
+Epoch: 8 | Loss (A): 6520.6777 | Loss (B): 6520.6772 | Loss (C): 6520.6777
+Epoch: 9 Rel Error:  0.13991372
+Epoch: 9 | Loss (A): 6481.0986 | Loss (B): 6481.099 | Loss (C): 6481.099
+Epoch: 10 Rel Error:  0.13915257
+Epoch: 10 | Loss (A): 6445.8413 | Loss (B): 6445.841 | Loss (C): 6445.8413
+Epoch: 11 Rel Error:  0.13846315
+Epoch: 11 | Loss (A): 6413.9062 | Loss (B): 6413.9062 | Loss (C): 6413.9062
+Epoch: 12 Rel Error:  0.13782999
+Epoch: 12 | Loss (A): 6384.5767 | Loss (B): 6384.577 | Loss (C): 6384.5767
+Epoch: 13 Rel Error:  0.13724163
+Epoch: 13 | Loss (A): 6357.3223 | Loss (B): 6357.3223 | Loss (C): 6357.322
+Epoch: 14 Rel Error:  0.13668925
+Epoch: 14 | Loss (A): 6331.735 | Loss (B): 6331.735 | Loss (C): 6331.735
+Epoch: 15 Rel Error:  0.13616605
+Epoch: 15 | Loss (A): 6307.499 | Loss (B): 6307.4985 | Loss (C): 6307.499
+Epoch: 16 Rel Error:  0.1356665
+Epoch: 16 | Loss (A): 6284.359 | Loss (B): 6284.3594 | Loss (C): 6284.3594
+Epoch: 17 Rel Error:  0.13518606
+Epoch: 17 | Loss (A): 6262.104 | Loss (B): 6262.104 | Loss (C): 6262.104
+Epoch: 18 Rel Error:  0.13472085
+Epoch: 18 | Loss (A): 6240.554 | Loss (B): 6240.554 | Loss (C): 6240.554
